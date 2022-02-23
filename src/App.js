@@ -1,10 +1,9 @@
-/* eslint-disable */
 import Calculator from './components/Calculator';
 
 function App() {
   return (
     <div>
-      <Calculator/>
+      <Calculator />
     </div>
   );
 }
