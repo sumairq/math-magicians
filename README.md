@@ -3,7 +3,9 @@
 
 # Math Magicians 
 
-> This is a calculator website made with React.js 
+![screenshot](./app_screenshot.png)
+
+> This is the repository for the Math Magicians application. This project is bootstrapped using the create-react-app. In the following projects, It uses react class based components and events.
 
 ## Built With
 React.js
@@ -12,20 +14,32 @@ HTML
 CSS
 
 
-## Getting Started
+## To Setup the project locally
+
 Just go ahead and clone the repository using the following link.
 
 [Clone from this link!](https://github.com/sumairq/math-magicians.git) 
 
-## Available Scripts
+## Available Scripts for setting up the project locally
 
 In the project directory, you can run:
 
 ### `npm start`
+Runs the app in the development mode.
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+The page will reload when you make changes.
+You may also see any lint errors in the console.
 
 ### `npm test`
+Launches the test runner in the interactive watch mode.\
 
 ### `npm run build`
+Builds the app for production to the `build` folder.
+It correctly bundles React in production mode and optimizes the `build` for the best performance.
+
+The `build` is minified and the filenames include the hashes.
+Your app is ready to be deployed!
 
 ## Author
 

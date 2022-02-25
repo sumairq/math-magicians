@@ -1,37 +1,52 @@
 import React, { Component } from 'react';
 import './Calculator.css';
+import calculate from '../logic/calculate';
 
 class Calculator extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      total: 0,
+      next: null,
+      operation: null,
+    };
+    this.handleClick = this.handleClick.bind(this);
+  }
 
-    this.state = {};
+  handleClick(btn) {
+    const txt = btn.target.textContent;
+    this.setState((e) => calculate(e, txt));
   }
 
   render() {
+    const { total, next, operation } = this.state;
     return (
       <div className="container">
-        <div className="result">0</div>
+        <div className="result">
+          {total}
+          {operation}
+          {next}
+        </div>
         <div className="buttons">
-          <span className="button resetBtn">AC</span>
-          <span className="button negative operator">+/-</span>
-          <span className="button operator percent">%</span>
-          <span className="button operator">/</span>
-          <span className="button number">7</span>
-          <span className="button number">8</span>
-          <span className="button number">9</span>
-          <span className="button operator">*</span>
-          <span className="button number">4</span>
-          <span className="button number">5</span>
-          <span className="button number">6</span>
-          <span className="button operator">-</span>
-          <span className="button number">1</span>
-          <span className="button number">2</span>
-          <span className="button number">3</span>
-          <span className="button operator">+</span>
-          <span className="button number zero-btn">0</span>
-          <span className="button number dot">.</span>
-          <span className="button  operator">=</span>
+          <button type="button" onClick={this.handleClick} className="button resetBtn">AC</button>
+          <button type="button" onClick={this.handleClick} className="button negative operator">+/-</button>
+          <button type="button" onClick={this.handleClick} className="button operator percent">%</button>
+          <button type="button" onClick={this.handleClick} className="button operator">/</button>
+          <button type="button" onClick={this.handleClick} className="button number">7</button>
+          <button type="button" onClick={this.handleClick} className="button number">8</button>
+          <button type="button" onClick={this.handleClick} className="button number">9</button>
+          <button type="button" onClick={this.handleClick} className="button operator">*</button>
+          <button type="button" onClick={this.handleClick} className="button number">4</button>
+          <button type="button" onClick={this.handleClick} className="button number">5</button>
+          <button type="button" onClick={this.handleClick} className="button number">6</button>
+          <button type="button" onClick={this.handleClick} className="button operator">-</button>
+          <button type="button" onClick={this.handleClick} className="button number">1</button>
+          <button type="button" onClick={this.handleClick} className="button number">2</button>
+          <button type="button" onClick={this.handleClick} className="button number">3</button>
+          <button type="button" onClick={this.handleClick} className="button operator">+</button>
+          <button type="button" onClick={this.handleClick} className="button number zero-btn">0</button>
+          <button type="button" onClick={this.handleClick} className="button number dot">.</button>
+          <button type="button" onClick={this.handleClick} className="button  operator">=</button>
         </div>
       </div>
     );
